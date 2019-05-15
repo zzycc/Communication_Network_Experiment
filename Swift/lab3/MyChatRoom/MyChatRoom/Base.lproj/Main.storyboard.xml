@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyChatRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxW-nM-h2y">
+                                <rect key="frame" x="282" y="89" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="UNr-ON-lxB"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgG-5z-ZS2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JbG-UI-Krc">
+                                <rect key="frame" x="40" y="90" width="223" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PFS-sl-Glv">
+                                <rect key="frame" x="40" y="178" width="163" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LqR-Rl-o5n">
+                                <rect key="frame" x="82" y="41" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="Lwv-uL-J05"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVx-rR-QSR">
+                                <rect key="frame" x="16" y="41" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="6yX-Rd-cfA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5j-pG-5G1">
+                                <rect key="frame" x="188" y="41" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="eav-Rw-bxR"/>
+                                </constraints>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChF-D5-SAG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGZ-xK-MWC">
+                                <rect key="frame" x="277" y="41" width="98" height="30"/>
+                                <state key="normal" title="Disconnect"/>
+                                <connections>
+                                    <action selector="DisconnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PhB-1c-A24"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sfa-YT-hmJ">
+                                <rect key="frame" x="211" y="178" width="138" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="WgC-tI-V3a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PFS-sl-Glv" firstAttribute="top" secondItem="JbG-UI-Krc" secondAttribute="bottom" constant="58" id="0hx-Zp-yaW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uxW-nM-h2y" secondAttribute="trailing" constant="47" id="2hH-jC-0yI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfa-YT-hmJ" secondAttribute="trailing" constant="26" id="32b-VI-TJX"/>
+                            <constraint firstItem="TVx-rR-QSR" firstAttribute="top" secondItem="LqR-Rl-o5n" secondAttribute="top" id="3SV-Wp-qoa"/>
+                            <constraint firstItem="uxW-nM-h2y" firstAttribute="top" secondItem="yGZ-xK-MWC" secondAttribute="bottom" constant="18" id="4vn-j7-csB"/>
+                            <constraint firstItem="TVx-rR-QSR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="69i-S2-GJc"/>
+                            <constraint firstItem="LqR-Rl-o5n" firstAttribute="leading" secondItem="TVx-rR-QSR" secondAttribute="trailing" constant="8" symbolic="YES" id="6oC-qm-aUZ"/>
+                            <constraint firstItem="m5j-pG-5G1" firstAttribute="leading" secondItem="LqR-Rl-o5n" secondAttribute="trailing" constant="48" id="Bn4-ma-7Fd"/>
+                            <constraint firstItem="JbG-UI-Krc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="CIW-5z-3PC"/>
+                            <constraint firstItem="LqR-Rl-o5n" firstAttribute="top" secondItem="m5j-pG-5G1" secondAttribute="top" id="HFb-FA-fkl"/>
+                            <constraint firstItem="yGZ-xK-MWC" firstAttribute="leading" secondItem="m5j-pG-5G1" secondAttribute="trailing" constant="24" id="LCk-Si-fuX"/>
+                            <constraint firstAttribute="trailing" secondItem="yGZ-xK-MWC" secondAttribute="trailing" id="N4z-6d-M0w"/>
+                            <constraint firstItem="m5j-pG-5G1" firstAttribute="baseline" secondItem="yGZ-xK-MWC" secondAttribute="baseline" id="Nu3-JP-zOg"/>
+                            <constraint firstItem="sfa-YT-hmJ" firstAttribute="leading" secondItem="PFS-sl-Glv" secondAttribute="trailing" constant="8" symbolic="YES" id="Oc5-cd-Mte"/>
+                            <constraint firstItem="JbG-UI-Krc" firstAttribute="baseline" secondItem="uxW-nM-h2y" secondAttribute="baseline" id="bWv-vG-fgh"/>
+                            <constraint firstItem="uxW-nM-h2y" firstAttribute="leading" secondItem="JbG-UI-Krc" secondAttribute="trailing" constant="19" id="e78-bs-ONC"/>
+                            <constraint firstItem="TVx-rR-QSR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fc8-mc-Np3"/>
+                            <constraint firstItem="PFS-sl-Glv" firstAttribute="top" secondItem="sfa-YT-hmJ" secondAttribute="top" id="jBN-Dv-6Vg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sfa-YT-hmJ" secondAttribute="bottom" constant="48" id="o0K-d5-QEV"/>
+                            <constraint firstItem="TVx-rR-QSR" firstAttribute="bottom" secondItem="LqR-Rl-o5n" secondAttribute="bottom" id="pHK-11-wvB"/>
+                            <constraint firstAttribute="bottom" secondItem="PFS-sl-Glv" secondAttribute="bottom" constant="20" symbolic="YES" id="zFU-Ai-atF"/>
+                            <constraint firstItem="JbG-UI-Krc" firstAttribute="leading" secondItem="PFS-sl-Glv" secondAttribute="leading" id="zv2-Tq-D0C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatContentTextView" destination="PFS-sl-Glv" id="FPz-Tm-9uu"/>
+                        <outlet property="memberlist" destination="sfa-YT-hmJ" id="mPa-xq-TYi"/>
+                        <outlet property="messageTextField" destination="JbG-UI-Krc" id="8xc-MY-i0O"/>
+                        <outlet property="nameTextField" destination="LqR-Rl-o5n" id="OOe-0T-V94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
